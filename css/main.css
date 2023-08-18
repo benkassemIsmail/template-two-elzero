@@ -1,0 +1,242 @@
+/* Global Rules */
+:root {
+    --main-color: #19c8fa;
+    --txt-color: #e8e8eb;
+    --hr-color: #636364;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 7vmax;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    margin-inline: auto;
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .container  {
+        width: 750px;
+    }
+    
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* Global Rules end */
+/* header section */
+header  {
+    background-color: transparent;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--txt-color);
+    z-index: 99;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 66px;
+    height: 1px;
+    background-color: var(--hr-color);
+    width: calc(100% - 40px);
+    left: 20px
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header img {
+    height: 36px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    header {
+        width:100%;
+    }
+    header ul  {
+        display: none;
+    }
+    
+}
+
+header li {
+    margin-left: 20px;
+}
+
+header a {
+    color: var(--txt-color);
+    transition: 0.2s;
+    text-transform: uppercase;
+}
+
+header .active {
+    color: var(--main-color);
+    padding-bottom: 19px;
+    border-bottom: 1px solid var(--main-color);
+    z-index: 99;
+}
+
+header a:hover {
+    color: var(--main-color);
+    padding-bottom: 19px;
+    border-bottom: 1px solid var(--main-color);
+}
+
+header span {
+    width: 2px;
+    max-height: 100%;
+    background-color: var(--hr-color);
+    margin-left: 50px;
+}
+header i {
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+/* header section end */
+/* landin section */
+.landing {
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+.landing div:first-of-type {
+    background-color: rgba(0, 0, 0, 0.466);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+.landing div:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 30px;
+    background-color: rgba(25, 201, 250, 0.602);
+    position: absolute;
+    min-width: 60%;
+    height: 335px;
+    top: 50%;
+    transform: translateY(-50%);
+    justify-content: center;
+  }
+
+  @media (max-width: 1300px) {
+    .landing div:nth-of-type(2) {
+        padding-left: 30px;
+    }
+  }
+  @media (max-width: 992px) {
+    .landing div:nth-of-type(2) {
+        width: 100%;
+    }
+    .landing div:nth-of-type(2) * {
+        width: 90%
+    }
+  }
+ 
+  .landing h3 {
+    width: 550px;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--txt-color);
+    line-height: 1.667;
+    text-align: left;
+  }
+
+  .landing p {
+    width: 550px;
+    font-size: 13px;
+    color: var(--txt-color);
+    line-height: 2.154;
+    text-align: left;
+  }
+ .landing i {
+    font-size: 25px;
+    color: var(--txt-color);
+    padding-inline: 10px;
+    transition: 0.3s;
+ }
+ .landing i:hover {
+    font-size: 40px;
+    color:var(--hr-color);
+    padding-inline: 25px;
+ }
+
+ .landing .right {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+ }
+ .landing .left {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+ }
+ 
+ .landing div:last-of-type {
+    position: absolute;
+    right: 50%;
+    bottom: 20px;
+    transform: translateX(50%);
+ }
+ 
+ .landing span {
+    display: inline-block;
+   width: 15px;
+   height: 15px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: 0.2s;
+ }
+ .landing span:hover {
+    width: 20px;
+    height: 20px;
+ }
+
+ .landing span:nth-of-type(2) {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+ }
+/* landin section end */
+
+
+  
