@@ -82,14 +82,23 @@ header ul {
     display: flex;
 }
 
-@media (max-width: 768px) {
+header nav i:last-of-type {
+    display: none;
+}
+@media (max-width: 767px) {
     header {
         width:100%;
     }
     header ul  {
         display: none;
     }
-    
+    header nav i:last-of-type {
+        display: inline-block;
+        margin-left: 15px;
+    }
+    header nav i:last-of-type:hover  ul {
+        display: flex;
+    }
 }
 
 header li {
@@ -100,6 +109,7 @@ header a {
     color: var(--txt-color);
     transition: 0.2s;
     text-transform: uppercase;
+    font-weight: 600;
 }
 
 header .active {
@@ -124,6 +134,11 @@ header span {
 header i {
     font-size: 1.2rem;
     margin-left: 10px;
+}
+
+header nav i:last-of-type:hover  ul{
+    display: flex;
+
 }
 /* header section end */
 /* landin section */
@@ -172,17 +187,19 @@ header i {
   }
  
   .landing h3 {
+    text-transform: uppercase;
     width: 550px;
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 400;
     color: var(--txt-color);
     line-height: 1.667;
     text-align: left;
-  }
+}
 
-  .landing p {
+.landing p {
     width: 550px;
     font-size: 13px;
+    font-weight: 400;
     color: var(--txt-color);
     line-height: 2.154;
     text-align: left;
