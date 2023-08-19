@@ -2,7 +2,10 @@
 :root {
     --main-color: #19c8fa;
     --txt-color: #e8e8eb;
+    --sd-txt-color: #b4b4b4;
+    --hed-txt-color: #1f2021;
     --hr-color: #636364;
+    --bg-color: #f3f6f7;
 }
 
 * {
@@ -255,5 +258,105 @@ header nav i:last-of-type:hover  ul{
  }
 /* landin section end */
 
+/* start global section header */
+
+.sct_header {
+    text-align: center;
+    padding-top: 70px;
+}
+
+.sct_header h3 {
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+    color: var(--hed-txt-color);
+}
+
+.sct_header h3::before {
+    content: '';
+    display: block;
+    background-color: var(--hed-txt-color);
+    width: 168px;
+    height: 1px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 65px);
+}
+
+.sct_header h3::after {
+    content: '';
+    display: block;
+    background-color: white;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    left: 50%;
+    border-radius: 50%;
+    border: 1px solid var(--hed-txt-color);
+    transform: translate(-50%, 5px);
+}
+
+.sct_header p {
+    color: var(--sd-txt-color);
+    width: 450px;
+    position: absolute;
+    left: 50%;
+    line-height: 1.7;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    .sct_header p {
+        width: 350px;
+    }
+}
+/* end global section header */
+/* start services */
+#services .content {
+    margin-top: 140px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+    row-gap: 60px;
+    column-gap: 30px;
+}
+
+#services .content div {
+    display: flex;
+    flex-wrap: wrap
+}
+
+#services  img {
+    padding-right: 35px;
+}
+
+#services .content h4 {
+    color: var(--main-color);
+    font-size: 1.2rem;
+}
+
+#services .content p {
+    color: var(--sd-txt-color);
+    line-height: 1.7;
+    padding-left: 82px;
+}
+
+@media (max-width: 768px) {
+    #services .content div {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    #services .content div * {
+        padding-block: 10px;
+    }
+    #services  img {
+        padding-right: 0;
+    }
+    #services .content p {
+        padding-left: 0;
+    }
+}
+/* end services */
 
   
