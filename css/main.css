@@ -1,6 +1,7 @@
 /* Global Rules */
 :root {
     --main-color: #19c8fa;
+    --main-tp-color: #19c9fa9a;
     --txt-color: #e8e8eb;
     --sd-txt-color: #b4b4b4;
     --hed-txt-color: #1f2021;
@@ -166,7 +167,7 @@ header nav i:last-of-type:hover  ul{
     flex-direction: column;
     align-items: end;
     padding-right: 30px;
-    background-color: rgba(25, 201, 250, 0.602);
+    background-color: var(--main-tp-color);
     position: absolute;
     min-width: 60%;
     height: 335px;
@@ -314,7 +315,7 @@ header nav i:last-of-type:hover  ul{
 /* end global section header */
 /* start services */
 #services .content {
-    margin-top: 140px;
+    margin-block: 140px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
     row-gap: 60px;
@@ -357,6 +358,102 @@ header nav i:last-of-type:hover  ul{
         padding-left: 0;
     }
 }
-/* end services */
+.media {
+    width: 100%;
+    position: relative;
+}
+
+.media::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0 0 0 / 42%);
+}
+
+.media video {
+    max-width: 100%;
+}
+
+#services .media div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    background-color: var(--main-tp-color);
+    position: absolute;
+    min-width: 40%;
+    height: 50%;
+    right: 0;
+    top: 50%;
+    transform: translate( 0, -50%);
+    color: var(--txt-color);
+    padding-inline: 60px;
+    padding-block: 10px;
+}
+
+#services .media h3 {
+    width: 100%;
+   padding-bottom: 30px;
+}
+
+#services .media li ul {
+    padding-left: 50px;
+    padding-top: 10px;
+}
+
+#services .media li ul::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    margin-left: 60px;
+    background-image: url(../images/sm-diplay.png);
+    background-repeat: no-repeat;
+}
+
+@media (min-width: 1500px) {
+    #services .media div {
+        padding: 60px;
+    }
+}
+
+@media (max-width: 967px) {
+    #services .media div {
+        height: 100%;
+        width: 100%;
+    }
+    #services .media h3 {
+        padding-block: 80px;
+        text-align: right;
+    }
+    #services .media li {
+        position: absolute;
+        padding-top: 80px;
+        top: 50%;
+        right: 70px;
+        transform: translateY(-50%);
+    }
+    #services .media li ul{
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 667px) {
+    #services .media h3 {
+        text-align: center;
+    }
+    #services .media li {
+        
+        /* padding-top: 80px; */
+        left: 50%;
+        
+        transform: translate(-50%, -50%);
+    }
+}
 
   
+
+/* end services */
